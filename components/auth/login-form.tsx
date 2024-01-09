@@ -51,8 +51,7 @@ export function LoginForm({}: LoginFormProps) {
     startTransition(() => {
       login(values).then((res) => {
         setError(res?.error)
-        // TODO: Add when we add 2FA
-        // setSuccess(res?.success)
+        setSuccess(res?.success)
       })
     })
   }
