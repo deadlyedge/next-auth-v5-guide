@@ -24,10 +24,9 @@ import { FormSuccess } from "@/components/form-success"
 import { login } from "@/actions/login"
 import { CardWrapper } from "./card-wrapper"
 
-type LoginFormProps = {}
-
-export function LoginForm({}: LoginFormProps) {
+export function LoginForm() {
   const searchParams = useSearchParams()
+  const callbackUrl = searchParams.get("callbackUrl")
   const urlError =
     searchParams.get("error") === "OAuthAccountNotLinked"
       ? "Email already in use with another provider"
@@ -51,7 +50,7 @@ export function LoginForm({}: LoginFormProps) {
     setSuccess("")
 
     startTransition(() => {
-      login(values)
+      login(values, callbackUrl)
         .then((data) => {
           if (data?.error) {
             form.reset()
