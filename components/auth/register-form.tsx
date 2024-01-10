@@ -22,9 +22,7 @@ import { FormSuccess } from "@/components/form-success"
 import { CardWrapper } from "./card-wrapper"
 import { register } from "@/actions/register"
 
-type RegisterFormProps = {}
-
-export function RegisterForm({}: RegisterFormProps) {
+export const RegisterForm = () => {
   const [error, setError] = useState<string | undefined>("")
   const [success, setSuccess] = useState<string | undefined>("")
   const [isPending, startTransition] = useTransition() // maybe try this
@@ -52,7 +50,7 @@ export function RegisterForm({}: RegisterFormProps) {
   return (
     <CardWrapper
       headerLabel='Create an account'
-      backButtonLabel="Already have an account?"
+      backButtonLabel='Already have an account?'
       backButtonHref='/auth/login'
       showSocial>
       <Form {...form}>

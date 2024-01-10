@@ -24,7 +24,7 @@ import { FormSuccess } from "@/components/form-success"
 import { login } from "@/actions/login"
 import { CardWrapper } from "./card-wrapper"
 
-export function LoginForm() {
+export const LoginForm = () => {
   const searchParams = useSearchParams()
   const callbackUrl = searchParams.get("callbackUrl")
   const urlError =

@@ -1,7 +1,5 @@
 import { LoginForm } from "@/components/auth/login-form"
 
-type LoginPageProps = {}
-
-export default function LoginPage({}: LoginPageProps) {
+export default function LoginPage() {
   return <LoginForm />
 }

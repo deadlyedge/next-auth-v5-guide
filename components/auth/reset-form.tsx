@@ -22,9 +22,7 @@ import { FormSuccess } from "@/components/form-success"
 import { reset } from "@/actions/reset"
 import { CardWrapper } from "./card-wrapper"
 
-type LoginFormProps = {}
-
-export function ResetForm({}: LoginFormProps) {
+export const ResetForm = () => {
   const [error, setError] = useState<string | undefined>("")
   const [success, setSuccess] = useState<string | undefined>("")
   const [isPending, startTransition] = useTransition() // maybe try this

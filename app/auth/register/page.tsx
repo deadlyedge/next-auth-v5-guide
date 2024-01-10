@@ -1,7 +1,5 @@
 import { RegisterForm } from "@/components/auth/register-form"
 
-type RegisterPageProps = {}
-
-export default function RegisterPage({}: RegisterPageProps) {
+export default function RegisterPage() {
   return <RegisterForm />
 }
